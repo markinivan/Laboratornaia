@@ -18,14 +18,11 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Hotel.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b9aa66a3-0cfb-49f3-bf9f-483e33a9abf3}</ProjectGuid>
-    <RootNamespace>Hotel</RootNamespace>
+    <ProjectGuid>{48d93f4e-eace-4088-a9cf-52ae6e392463}</ProjectGuid>
+    <RootNamespace>Reserves</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -43,13 +40,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -107,10 +104,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Time;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Time;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -121,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,7 +128,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Reserves.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Reserves.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
