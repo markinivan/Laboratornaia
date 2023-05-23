@@ -21,10 +21,9 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{6edfe16b-e779-4471-84be-c2fced1b73c3}</ProjectGuid>
-    <RootNamespace>Time</RootNamespace>
+    <ProjectGuid>{decd2b88-1ea7-4369-9fae-97948343ce32}</ProjectGuid>
+    <RootNamespace>ConsoleApp</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Time</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -41,13 +40,13 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -119,21 +118,41 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\Rooms;C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Reserves</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\Rooms;C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Reserves</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="MyTime.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MyTime.h" />
+    <ProjectReference Include="..\FIO\FIO.vcxproj">
+      <Project>{4f7bfa31-534a-4a43-8153-89a3d1f4a667}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Person\Person.vcxproj">
+      <Project>{98bc9dbe-079d-4367-86eb-0d4a6abba8c2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reserves\Reserves.vcxproj">
+      <Project>{48d93f4e-eace-4088-a9cf-52ae6e392463}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Reserv\Reserv.vcxproj">
+      <Project>{a3cf8241-f3c0-4815-a639-46b5ef7c7380}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Rooms\Rooms.vcxproj">
+      <Project>{73e1d22c-c43e-4d8e-b902-107b1b9ce7af}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Room\Room.vcxproj">
+      <Project>{4e9f2685-478f-4686-bf00-f40fa86e48d2}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Time\Time.vcxproj">
+      <Project>{6edfe16b-e779-4471-84be-c2fced1b73c3}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,7 +129,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Time</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -137,6 +137,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Reserves.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Reserv\Reserv.vcxproj">
+      <Project>{a3cf8241-f3c0-4815-a639-46b5ef7c7380}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

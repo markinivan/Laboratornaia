@@ -9,6 +9,7 @@
 #include <cstdlib>
 #include <algorithm>
 #include <cstdlib>
+
 class Time {
 	int day;
 	int month;

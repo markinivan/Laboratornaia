@@ -9,9 +9,10 @@
 #include <cstdlib>
 #include <algorithm>
 #include <cstdlib>
-#include <MyTime.h>
-#include <Room.h>
-#include <Person.h>
+
+#include "MyTime.h"
+#include "Room.h"
+#include "Person.h"
 
 class Reserv {
 	Room room;
