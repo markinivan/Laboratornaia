@@ -23,7 +23,10 @@ public:
 	Person(const Person& copy);
 	void setPerson(FIO _name, Time _birthday, std::string _number);
 	FIO getName();
+	Time getBirthday();
+	std::string getNumber();
 	~Person();
 	Person& operator=(const Person& right);
 	bool operator==(const Person& right);
+	
 };

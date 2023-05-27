@@ -21,6 +21,9 @@ public:
 	void setLastName(std::string input);
 	void setSecondName(std::string input);
 	void setFirstName(std::string input);
+	std::string getFirstName();
+	std::string getSecondName();
+	std::string getLastName();
 
 	FIO& operator=(const FIO& right);
 	bool operator==(const FIO& right) const;

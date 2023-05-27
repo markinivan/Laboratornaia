@@ -29,6 +29,12 @@ void Person::setPerson(FIO _name, Time _birthday, std::string _number) {
 FIO Person::getName() {
 	return this->name;
 }
+Time Person::getBirthday() {
+	return this->birthday;
+}
+std::string Person::getNumber() {
+	return this->number;
+}
 Person::~Person() {}
 
 Person& Person::operator=(const Person& right) {

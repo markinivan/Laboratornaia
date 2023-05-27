@@ -20,10 +20,11 @@ public:
 	Reserves();
 	~Reserves();
 	void add(Reserv& obj);
-	int* ReservSearchRoom(int _room) const;
-	int* ReservSearchClient(Person& _client) const;
-	int* ReservSearchArrival(Time& _arrival) const;
-	int* ReservSearchDeparture(Time& _departure) const;
+	void ReservSearchRoom(int _room, int tmp[5]) const;
+	void ReservSearchClient(Person& _client, int tmp[5]) const;
+	void ReservSearchArrival(Time& _arrival, int tmp[5]) const;
+	void ReservSearchDeparture(Time& _departure, int tmp[5]) const;
 	bool AddReserv(Reserv& _reserv);
 	void DelReserv(int a);
+	Reserv ReservOutput(int a);
 };

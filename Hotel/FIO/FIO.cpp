@@ -27,6 +27,15 @@ void FIO::setSecondName(std::string input) {
 void FIO::setFirstName(std::string input) {
 	this->firstName = input;
 }
+std::string FIO::getFirstName() {
+	return this->firstName;
+}
+std::string FIO::getSecondName() {
+	return this->secondName;
+}
+std::string FIO::getLastName() {
+	return this->lastName;
+}
 
 FIO& FIO::operator=(const FIO & right) {
 	if (not(*this == right)) {

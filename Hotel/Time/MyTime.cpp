@@ -17,7 +17,7 @@ Time::Time(std::string input) {
 	hours = (input[3] - DIGIT_INTERVAL) * 10 + input[4] - DIGIT_INTERVAL;
 	day = (input[6] - DIGIT_INTERVAL) * 10 + input[7] - DIGIT_INTERVAL;
 	month = (input[9] - DIGIT_INTERVAL) * 10 + input[10] - DIGIT_INTERVAL;
-	year = (input[13] - DIGIT_INTERVAL) * 1000 + (input[14] - DIGIT_INTERVAL) * 100 + (input[15] - DIGIT_INTERVAL) * 10 + input[16] - DIGIT_INTERVAL;
+	year = (input[12] - DIGIT_INTERVAL) * 1000 + (input[13] - DIGIT_INTERVAL) * 100 + (input[14] - DIGIT_INTERVAL) * 10 + input[15] - DIGIT_INTERVAL;
 }
 Time::Time(int _day, int _month, int _year , int _minutes, int _hours) : day(_day), month(_month), year(_year), minutes(_minutes), hours(_hours) {}
 Time::Time(const Time& copy) {
@@ -63,12 +63,36 @@ bool Time::operator>(const Time& right) const {
 	else {
 		return false;
 	}
+
 }
-	bool Time::check() {
-		if (0 < this->day and 32 > this->day and 0 < this->month and 13 > this->month and 0 < this->year) {
-			return 1;
-		}
-		else {
-			return 0;
-		}
+std::string Time::Output() {
+	std::string minutes = std::to_string(this->minutes);
+	std::string hours = std::to_string(this->hours);
+	std::string day = std::to_string(this->day);
+	std::string month = std::to_string(this->month);
+	std::string year = std::to_string(this->year);
+	if (this->minutes < 10) {
+	minutes = "0" + std::to_string(this->minutes);
+	}
+	if (this->hours < 10) {
+	hours = "0" + std::to_string(this->hours);
+	}
+	if (this->day < 10) {
+	day = "0" + std::to_string(this->day);
+	}
+	if (this->month < 10) {
+	month = "0" + std::to_string(this->month);
+	}
+	std::string out = hours + ":" + minutes + "/" + day + "." + month + "." + year;
+	return out;
+
+}
+bool Time::check() const {
+	if (0 < this->day && 32 > this->day && 0 < this->month && 13 > this->month && 0 < this->year) {
+		return 1;
+	}
+	else {
+		return 0;
+	}
+	
 	}

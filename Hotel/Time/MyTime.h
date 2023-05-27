@@ -25,6 +25,6 @@ public:
 	bool operator==(const Time& right) const;
 	bool operator<(const Time& right) const;
 	bool operator>(const Time& right) const;
-private:
-	bool check();
+	bool check() const;
+	std::string Output();
 };

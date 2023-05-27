@@ -26,8 +26,12 @@ void Reserves::add(Reserv& obj) {
 	}
 }
 
-int* Reserves::ReservSearchRoom(int _room) const {
-	int tmp[5] = { -1, -1, -1, -1, -1 };
+void Reserves::ReservSearchRoom(int _room, int tmp[5]) const {
+	tmp[0] = -1;
+	tmp[1] = -1;
+	tmp[2] = -1;
+	tmp[3] = -1;
+	tmp[4] = -1;
 	for (int i = 0; i < size; i++) {
 		if (archive[i].getRoom().getID() == _room) {
 			if (tmp[4] == -1) {
@@ -49,11 +53,14 @@ int* Reserves::ReservSearchRoom(int _room) const {
 			}
 		}
 	}
-	return tmp;
 }
 
-int* Reserves::ReservSearchClient(Person& _client) const {
-	int tmp[5] = { -1, -1, -1, -1, -1 };
+void Reserves::ReservSearchClient(Person& _client, int tmp[5]) const {
+	tmp[0] = -1;
+	tmp[1] = -1;
+	tmp[2] = -1;
+	tmp[3] = -1;
+	tmp[4] = -1;
 	for (int i = 0; i < size; i++) {
 		if (archive[i].getClient() == _client) {
 			if (tmp[4] == -1) {
@@ -75,11 +82,14 @@ int* Reserves::ReservSearchClient(Person& _client) const {
 			}
 		}
 	}
-	return tmp;
 }
 
-int* Reserves::ReservSearchArrival(Time& _arrival) const {
-	int tmp[5] = { -1, -1, -1, -1, -1 };
+void Reserves::ReservSearchArrival(Time& _arrival, int tmp[5]) const {
+	tmp[0] = -1;
+	tmp[1] = -1;
+	tmp[2] = -1;
+	tmp[3] = -1;
+	tmp[4] = -1;
 	for (int i = 0; i < size; i++) {
 		if (archive[i].getATime() == _arrival) {
 			if (tmp[4] == -1) {
@@ -101,11 +111,14 @@ int* Reserves::ReservSearchArrival(Time& _arrival) const {
 			}
 		}
 	}
-	return tmp;
 }
 
-int* Reserves::ReservSearchDeparture(Time& _departure) const {
-	int tmp[5] = { -1, -1, -1, -1, -1 };
+void Reserves::ReservSearchDeparture(Time& _departure, int tmp[5]) const {
+	tmp[0] = -1;
+	tmp[1] = -1;
+	tmp[2] = -1;
+	tmp[3] = -1;
+	tmp[4] = -1;
 	for (int i = 0; i < size; i++) {
 		if (archive[i].getDTime() == _departure) {
 			if (tmp[4] == -1) {
@@ -127,7 +140,6 @@ int* Reserves::ReservSearchDeparture(Time& _departure) const {
 			}
 		}
 	}
-	return tmp;
 }
 
 bool Reserves::AddReserv(Reserv& _reserv) {
@@ -149,4 +161,8 @@ void Reserves::DelReserv(int a) {
 		archive[i] = archive[i + 1];
 	}
 	count -= 1;
+}
+
+Reserv Reserves::ReservOutput(int a) {
+	return this->archive[a];
 }

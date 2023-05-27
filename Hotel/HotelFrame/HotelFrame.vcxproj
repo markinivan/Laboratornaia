@@ -79,11 +79,13 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Reserves;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Rooms;C:\GitHubProjects\Laboratornaia\Hotel\Time</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\GitHubProjects\Laboratornaia\Hotel\FIO;C:\GitHubProjects\Laboratornaia\Hotel\Person;C:\GitHubProjects\Laboratornaia\Hotel\Reserv;C:\GitHubProjects\Laboratornaia\Hotel\Reserves;C:\GitHubProjects\Laboratornaia\Hotel\Room;C:\GitHubProjects\Laboratornaia\Hotel\Rooms;C:\GitHubProjects\Laboratornaia\Hotel\Time</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
